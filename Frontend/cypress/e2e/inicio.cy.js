@@ -25,5 +25,9 @@ describe('Página Principal', () => {
     // area dos dispositivos
     cy.getByData('dispositivos').find("h3", ).should('contain', 'Seguro Dispositivos')
     cy.getByData('dispositivos').find("p", ).should('contain', ' Seus dispositivos móveis (computador e laptop) protegidos por uma mensalidade simbólica.')
+
+    // imagens
+    cy.getByData('icone').should("be.visible")
+    cy.getByData('imagem').should("be.visible")
   })
 })
