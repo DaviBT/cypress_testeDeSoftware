@@ -27,3 +27,8 @@
 Cypress.Commands.add('getByData', (seletor) => {
 return cy.get(`[data-test=${seletor}]`)
 })
+
+// comando personalizado
+Cypress.Commands.add('getByName', (seletor) => {
+return cy.get(`[data-test=${seletor}]`)
+})
