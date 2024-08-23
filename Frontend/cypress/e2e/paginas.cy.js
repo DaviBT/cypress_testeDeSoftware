@@ -7,15 +7,17 @@ describe('Testando múltiplas páginas', () => {
         cy.getByData('botao-enviar').click()
         // home
         cy.location('pathname').should('eq','/home')
+        // cartoes
         cy.getByData('app-home').find('a').eq(1).click()
         cy.getByData('titulo-cartoes').should('exist').and('have.text', 'Meus cartões')
-        // cartoes
         cy.location('pathname').should('eq','/home/cartoes')
         // servicos
         cy.getByData('app-home').find('a').eq(2).click()
+        cy.getByData('container-servicos').should('exist')
         cy.location('pathname').should('eq','/home/servicos')
         // investimentos
         cy.getByData('app-home').find('a').eq(3).click()
+        cy.getByData('titulo-investimentos').should('exist').and('have.text', 'Investimentos')
         cy.location('pathname').should('eq','/home/investimentos')
     })
     

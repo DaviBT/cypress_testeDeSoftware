@@ -5,7 +5,7 @@ import Icone from './Icone';
 
 export default function Servicos() {
   return (
-    <section className="container">
+    <section className="container" data-test='container-servicos'>
       <div className={estilos.detalhe__superior} />
       <div className={estilos.wrapper}>
         {icones.map((icone) => {
