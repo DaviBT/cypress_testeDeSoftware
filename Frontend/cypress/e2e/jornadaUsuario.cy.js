@@ -1,6 +1,6 @@
 describe('Jornadas de usuário', () => {
     // transferência
-    it('Deve permitir que o usuário acesse a aplicação, realize uma transação e faça logout', () => {
+    it('Deve permitir que o usuário acesse a aplicação, realize uma transação e faça logout', {browser: 'edge'}, () => {
         cy.visit('/')
         cy.getByData('botao-login').click()
         cy.getByData('email-input').type('neilton@alura.com')
