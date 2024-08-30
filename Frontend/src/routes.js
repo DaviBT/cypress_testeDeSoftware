@@ -7,6 +7,7 @@ import Pagina404 from 'paginas/Pagina404';
 import Home from 'paginas/Home';
 import Inicio from 'paginas/Inicio';
 
+
 export default function AppRoutes() {
   return (
     <Routes>
